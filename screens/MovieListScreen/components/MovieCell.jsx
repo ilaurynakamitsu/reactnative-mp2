@@ -6,9 +6,27 @@ export const MovieCell = ({ movieItem }) => {
   // TODO: Create and return the MovieCell component.
   // HINT: Take a look at the movieCell styles, as well as the video
   // demo in the spec, to figure out what this should look like.
+  
+  
+  //Notes: need individual movie cell, Title of movie (bigger font), actors in movie (smaller font) under title, 
+  //picture of movie to left of text
+  //ADDED!!!
+
   return (
-    <View>
-      <Text>Placeholder</Text>
+    <View style={styles.movieCell}>
+      <View style={styles.movieCellLeft}>
+        <Image style={styles.movieCellImage} source={{uri: movieItem.posterurl}} />
+      </View>
+      <View style={styles.movieCellRight}>
+        <Text 
+          style={styles.movieCellTitle}>
+          {movieItem.title}
+        </Text>
+        <Text 
+          style={styles.movieCellSubtitle}>
+          {movieItem.actors.join(', ')}
+        </Text>
+      </View>
     </View>
   );
 };

@@ -4,7 +4,15 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
-    backgroundColor: "#ffffff",
+    backgroundColor: "#ffffff"
+  },
+  movieimage: {
+    justifyContent: 'center',
+    alignSelf: 'center',
+    margin: 10,
+    height: 240, 
+    width: 180, 
+    resizeMode: "contain" 
   },
   h1: {
     fontFamily: "Avenir",
